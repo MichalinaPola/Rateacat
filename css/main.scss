@@ -5,6 +5,7 @@ $green: #80C56A;
 $blue: #A9DCDC;
 $grey: #8B9399;
 $border-radius: 80px;
+$shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
 body {
     margin: 0;
@@ -28,11 +29,11 @@ body {
     background-color: #F7EFE2;
     background-size: cover;
     background-repeat: no-repeat;
-    position: absolute;
+    position: relative;
     top: 0;
     width: 100%;
     font-weight: bold;
-    img {
+    > img {
         position: absolute;
         &.cat-left {
             width: 30%;
@@ -64,6 +65,8 @@ nav {
         top: 0;
         right: 0;
         width: 53%;
+        z-index: 2;
+        filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.19));
     }
     ul {
         display: flex;
@@ -71,11 +74,16 @@ nav {
         justify-content: space-between;
         width: 40%;
         right: 5%;
-        top: 3%;
+        top: 2.5%;
+        z-index:3;
     }
     li {
         float: left;
         font-size: 30px;
+        transition: transform 1s;
+    }
+    li:hover {
+        transform: scale(1.2);
     }
 }
 
@@ -88,6 +96,7 @@ nav {
     position: absolute;
     left: 100px;
     top: 100px;
+    box-shadow: $shadow;
     span {
         line-height: 55px;
         font-size: 38px;
@@ -106,4 +115,31 @@ nav {
     justify-content: center;
     font-size: 45px;
     padding-top: 40px;
+    box-shadow: $shadow;
+}
+
+.featured {
+    height: 100vh;
+    h2 {
+        margin: 1em 3.8em;
+        font-size: 2.5em;
+    }
+    .cats {
+        width:80%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+    .cat {
+        padding: 1em;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+.featured img {
+    width: 285px;
+    height: 418px;
+    object-fit: cover;
 }
