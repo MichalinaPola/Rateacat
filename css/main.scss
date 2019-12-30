@@ -1,0 +1,109 @@
+// main colours
+$orange: #FAA443;
+$red: #F37F71;
+$green: #80C56A;
+$blue: #A9DCDC;
+$grey: #8B9399;
+$border-radius: 80px;
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, sans-serif;
+    li { list-style: none; }
+    a { text-decoration: none;
+        color: inherit; }
+}
+
+.orange { color: $orange; }
+.red { color: $red; }
+.green { color: $green; }
+.blue { color: $blue; }
+.grey { color: $grey; }
+
+.landing-page {
+    height: 100vh;
+    background-image: url("../images/background.svg");
+    background-color: #F7EFE2;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    font-weight: bold;
+    img {
+        position: absolute;
+        &.cat-left {
+            width: 30%;
+            bottom: 3%;
+            left: 3%;
+        }
+        &.cat-right {
+            width: 32%;
+            bottom: 4%;
+            right: 4%;
+        }
+        &.arrow-down {
+            width: 8%;
+            top: 75%;
+            left: (92%/2);
+            animation: scroll-down 2s ease-in 2s infinite alternate;
+        }
+    }
+}
+
+@keyframes scroll-down {
+    from {top:75%;}
+    to {top: 78%;}
+}
+
+nav {
+    img {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 53%;
+    }
+    ul {
+        display: flex;
+        position: fixed;
+        justify-content: space-between;
+        width: 40%;
+        right: 5%;
+        top: 3%;
+    }
+    li {
+        float: left;
+        font-size: 30px;
+    }
+}
+
+.logo {
+    width: 26%; 
+    height: 8.5%;
+    background-color: #fff;
+    border-radius: $border-radius;
+    text-align: center;
+    position: absolute;
+    left: 100px;
+    top: 100px;
+    span {
+        line-height: 55px;
+        font-size: 38px;
+    }
+}
+
+.title {
+    width: 36%;
+    height: 210px;
+    background-color: #fff;
+    border-radius: $border-radius;
+    position: absolute;
+    top: 25%;
+    left: 32%;
+    text-align: center;
+    justify-content: center;
+    font-size: 45px;
+    padding-top: 40px;
+}
