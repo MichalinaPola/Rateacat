@@ -5,7 +5,6 @@ $green: #80C56A;
 $blue: #A9DCDC;
 $grey: #8B9399;
 $border-radius: 80px;
-$shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
 body {
     margin: 0;
@@ -66,7 +65,6 @@ nav {
         right: 0;
         width: 53%;
         z-index: 2;
-        filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.19));
     }
     ul {
         display: flex;
@@ -96,7 +94,6 @@ nav {
     position: absolute;
     left: 100px;
     top: 100px;
-    box-shadow: $shadow;
     span {
         line-height: 55px;
         font-size: 38px;
@@ -115,13 +112,12 @@ nav {
     justify-content: center;
     font-size: 45px;
     padding-top: 40px;
-    box-shadow: $shadow;
 }
 
 .featured {
     height: 100vh;
     h2 {
-        margin: 1em 3.8em;
+        margin: 1em 4em;
         font-size: 2.5em;
     }
     .cats {
@@ -131,10 +127,18 @@ nav {
         grid-template-columns: auto auto auto;
     }
     .cat {
-        padding: 1em;
+        padding: 0 1em;
         justify-content: center;
         align-items: center;
         text-align: center;
+        h3 {
+            font-size: 1.8em;
+            margin: 0.5em;
+        }
+        p {
+            margin: 0 0 1.5em 0; 
+            font-size: 1.4em;
+        }
     }
 }
 
@@ -142,4 +146,45 @@ nav {
     width: 285px;
     height: 418px;
     object-fit: cover;
+    border: 10px solid;
+    border-radius: $border-radius;
+    .green {
+        border-color: $green;
+    }
+    .blue {
+        border-color:$blue;
+    }
+    .orange {
+        border-color: $orange;
+    }
+}
+
+.featured button {
+    border: 2px solid;
+    border-radius: $border-radius;
+    width: 60%;
+    line-height: 2.3em;
+    font-size: 1.2em;
+    margin-bottom: 1em;
+    &.btn-green {
+        border-color: $green;
+        color: $green;
+    }
+    &.btn-blue {
+        border-color: $blue;
+        color: $blue;
+    }
+    &.btn-orange {
+        border-color: $orange;
+        color: $orange;
+    }
+}
+
+.sing-up {
+    background-image: url("../images/sing-up.svg");
+    width: 100%;
+    h2 {
+        line-height: 3em;
+        font-size: 2.5em;
+    }
 }
