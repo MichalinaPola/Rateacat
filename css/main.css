@@ -242,12 +242,65 @@ nav li:hover {
 }
 
 .sing-up {
-  background-image: url("../images/sing-up.svg");
+  margin: 7em 0;
+  background-image: url("../images/sing-up-background.svg");
+  background-size: cover;
+  height: 350px;
+  background-repeat: no-repeat;
   width: 100%;
 }
 
 .sing-up h2 {
+  position: relative;
+  top: 3em;
+  width: 70%;
+  text-align: center;
+  margin: 0 auto;
   line-height: 3em;
-  font-size: 2.5em;
+  font-size: 2em;
+  background: white;
+  border-radius: 80px;
+}
+
+.sing-up form {
+  position: relative;
+  top: 7.5em;
+  width: 670px;
+  margin: 0 auto;
+}
+
+.sing-up form > * {
+  border: none;
+  border-radius: 80px;
+}
+
+.sing-up form .email {
+  font-size: 1.3em;
+  color: #8B9399;
+  padding: 0 12em 0 2em;
+  background-color: white;
+  line-height: 2.7em;
+}
+
+.sing-up form .sing-up-btn {
+  background-color: orange;
+  font-size: 1.9em;
+  color: white;
+  font-weight: bold;
+  padding: 0.3em 1em;
+}
+
+.success {
+  display: none;
+  position: relative;
+  top: 32%;
+  background-color: white;
+  border-radius: 80px;
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 2em;
+  line-height: 1.7em;
+  padding: 0.5em 0;
 }
 /*# sourceMappingURL=main.css.map */

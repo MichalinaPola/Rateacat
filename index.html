@@ -59,16 +59,27 @@
     </section>
 
     <section class="sing-up">
-        <h2>
-            <span class="red">Sing up</span>
-            <span class="grey">today for</span>
-            <span class="green">top quality</span>
-            <span class="grey">cat reviews</span>
-            <form>
-                Enter your email <input type="email" name="femail">
-                <input type="submit" value="Submit">
-            </form>
-        </h2>
+        <div class="before-sing-up">
+            <h2>
+                <span class="red">Sing up</span>
+                <span class="grey">today for</span>
+                <span class="green">top quality</span>
+                <span class="grey">cat reviews</span>
+            </h2>
+                <form action="/subscribe" method="POST">
+                    <input type="email" name="email" class="email" id="email" placeholder="Enter your email" required>
+                    <input type="submit" value="Submit" class="sing-up-btn" id="sing-up-btn">
+                </form>
+        </div>
+        <h3 class="success">
+            <span class="orange">Thank you</span>
+            <span class="grey">for</span>
+            <span class="blue">signing</span>
+            <span class="grey">up!<br>Have</span>
+            <span class="red">fun</span>
+            <span class="grey">reading the</span>
+            <span class="green">reviews</span>
+        </h3>
     </section>
 
 </body>
