@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rate a cat</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <section class="landing-page">
+        <nav>
+            <img src="images/nav-background.svg" alt="white blue-background">
+            <ul>
+                <li class="orange"><a href="#">Home</a></li>
+                <li class="red"><a href="#">Reviews</a></li>
+                <li class="green"><a href="#">About</a></li>
+            </ul>
+        </nav>
+        <div class="logo">
+            <span class="blue">rate</span><span class="grey">a</span><span class="orange">cat</span><span class="grey">.com</span>
+        </div>
+        <h1 class="title">
+            <span class="green">Cats</span>
+            <span class="orange">reviews</span><br>
+            <span class="grey">you don't</span><br>
+            <span class="blue">know</span>
+            <span class="grey">you</span>
+            <span class="red">need</span>
+        </h1>
+        <img class="cat-left" src="images/cat-left.png" alt="grey cat">
+        <img class="cat-right" src="images/cat-right.png" alt="orange cat">
+        <img class="arrow-down" src="images/arrow-down.png" alt="arrow-down">
+    </section>
+
+    <section class="featured">
+        <h2><span class="red">Featured</span>
+            <span class="grey">cats</span></h2>
+        <div class="cats">
+            <div class="cat green">
+                <img src="images/cat-oliver.jpg" alt="black cat">
+                <h3>Oliver</h3>
+                <p class="grey">“Incredibly soft and<br>purry boi”</p>
+                <button class="btn-green" type="button"><strong>See full review</strong></button>
+            </div>
+            <div class="cat blue">
+                <img src="images/cat-lola.jpg" alt="tabby cat">
+                <h3>Lola</h3>
+                <p class="grey">“Excellent hunter,<br>talented theft”</p>
+                <button class="btn-blue" type="button"><strong>See full review</strong></button>
+            </div>
+            <div class="cat orange">
+                <img src="images/cat-peanut.jpg" alt="black cat">
+                <h3>Peanut</h3>
+                <p class="grey">“Best companionship<br>for winter nights” </p>
+                <button class="btn-orange" type="button"><strong>See full review</strong></button>
+            </div>
+        </div>
+    </section>
+
+    <section class="sing-up">
+        <div class="before-sing-up" id="before-sing-up">
+            <h2>
+                <span class="red">Sing up</span>
+                <span class="grey">today for</span>
+                <span class="green">top quality</span>
+                <span class="grey">cat reviews</span>
+            </h2>
+                <form>
+                    <input type="email" name="email" class="email" id="email" placeholder="Enter your email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                    <input type="submit" value="Submit" class="sing-up-btn" id="sing-up-btn">
+                    <p id="sign-up-error" class="sign-up-error">Please enter an email address</p>
+                </form>
+        </div>
+        <h3 class="success" id="success">
+            <span class="orange">Thank you</span>
+            <span class="grey">for</span>
+            <span class="blue">signing</span>
+            <span class="grey">up!<br>Have</span>
+            <span class="red">fun</span>
+            <span class="grey">reading the</span>
+            <span class="green">reviews</span>
+        </h3>
+    </section>
+
+    <script src="javascript/index.js"></script>
+
+</body>
+</html>
