@@ -6,26 +6,27 @@ let submit = document.getElementById("sing-up-btn");
 let email = document.getElementById("email");
 let error = document.getElementById("sign-up-error")
 
+function emailIsValid (emailAddress) {
+  return /\S+@\S+\.\S+/.test(emailAddress)
+}
+
 submit.addEventListener("click", function() {
     event.preventDefault();
-    if (email.value == null || email.value == "") {
-        error.style.display = "block";
-    } else {
+    if (emailIsValid(email.value)) {
         let fetchData = {
             method: 'POST',
             body: JSON.stringify({email: email.value}),
             headers: {"Content-Type": "application/json"}
         }
-        console.log(fetchData);
         fetch('/sign-up', fetchData)
             .then(res => {
                 if (res.ok){
                     console.log("response ok")
+                    initial.style.display = "none";
+                    success.style.display = "block";
                 } else {
                     console.log("error occured")
                 }
             })
-        initial.style.display = "none";
-        success.style.display = "block";
-    }
+    } else {error.style.display = "block";}
 });
