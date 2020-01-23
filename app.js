@@ -23,14 +23,22 @@ const client = new Client({
 
 app.post('/sign-up', (req, res) => {
     const { email } = req.body;
-    
-    // Database part
+    // Database part 
     client.connect()
-    .then(() => console.log("Connected to the database"))
-    .then(() => client.query("INSERT INTO subscriptions (email) VALUES ($1)", [email]))
-    .catch(e => console.log(e))
-    .finally(() => client.end());
-
-    res.sendStatus(200)
+    client.query("SELECT * FROM subscriptions WHERE email = $1", [email], (err, response) => {
+            if (err) {
+              console.log(err.stack)
+              client.end(); 
+            } else {
+              if (response.rows.length === 0) {
+                client.query("INSERT INTO subscriptions (email) VALUES ($1)", [email])
+                .then(() => client.end())
+                res.sendStatus(200);
+                } else {
+                client.end();
+                res.sendStatus(400);
+                } 
+            }
+          })
 });
 
