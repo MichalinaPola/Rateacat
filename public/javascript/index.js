@@ -29,8 +29,15 @@ submit.addEventListener("click", function() {
                 } if (res.status === 400) {
                     emailExists.style.display = "block";
                 } else {
-                    console.log("Other error occured")
+                    console.log("Why are we even reaching this else???")
                 }
             })
     } else {error.style.display = "block";}
 });
+
+// youtube videos
+var videos = ["https://www.youtube.com/embed/EKa093BiHYo", "https://www.youtube.com/embed/W86cTIoMv2U", "https://www.youtube.com/embed/pdrtgIMlx2k",
+"https://www.youtube.com/embed/XyNlqQId-nk", "https://www.youtube.com/embed/nl8o9PsJPAQ", "https://www.youtube.com/embed/CYPJzQppANo",
+"https://www.youtube.com/embed/9QHp7lFT-WY", "https://www.youtube.com/embed/IYxvrSs4TYk", "https://www.youtube.com/embed/sI8NsYIyQ2A",];
+var randomVideo = videos[Math.floor(Math.random()*videos.length)];
+document.getElementById("video").src = randomVideo;

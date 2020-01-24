@@ -242,7 +242,9 @@ nav li:hover {
 }
 
 .sing-up {
-  margin: 7em 0;
+  position: relative;
+  z-index: 3;
+  margin: 7em 0 0;
   background-image: url("../images/sing-up-background.svg");
   background-size: cover;
   height: 420px;
@@ -328,5 +330,61 @@ nav li:hover {
   font-size: 2em;
   line-height: 1.7em;
   padding: 0.5em 0;
+}
+
+.video-section h1 {
+  font-size: 2.5em;
+  margin: 1em 4em 0;
+}
+
+.video-section p {
+  font-size: 1.75em;
+  width: 72%;
+  text-align: center;
+  margin: 2em auto 2.5em;
+  line-height: 1.55em;
+}
+
+.video-section .video {
+  position: relative;
+  width: 1029px;
+  height: 581px;
+  margin: 0 11.5%;
+  z-index: 3;
+  border: 12px solid #8B9399;
+  border-radius: 10px;
+}
+
+footer {
+  margin-top: 5em;
+  height: 280px;
+  background-color: #A9DCDC;
+  font-size: 1.2em;
+}
+
+footer img {
+  height: 80%;
+  padding-top: 2em;
+}
+
+footer .footer-info, footer .footer-legal {
+  width: 20%;
+  text-align: center;
+  position: relative;
+}
+
+footer .footer-info {
+  left: 40%;
+  top: -70%;
+  line-height: 1.9em;
+}
+
+footer .footer-legal {
+  left: 70%;
+  top: -125%;
+}
+
+footer .taller {
+  line-height: 4em;
 }
 /*# sourceMappingURL=main.css.map */
