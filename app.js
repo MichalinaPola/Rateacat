@@ -1,5 +1,4 @@
 const express = require('express');
-const request = require('request');
 const bodyParser = require('body-parser');
 const path = require('path');
 const { Client } = require('pg')
@@ -11,6 +10,7 @@ app.use(bodyParser.urlencoded({extended:false}));
 app.use(express.static(path.join(__dirname, 'public')));
 
 const PORT = process.env.PORT || 5000;
+
 app.listen(PORT, console.log('Server is started'));
 
 const client = new Client({
@@ -20,23 +20,24 @@ const client = new Client({
     password: 'postgres',
     port: 5432,
 })
+client.connect()
 
 app.post('/sign-up', (req, res) => {
     const { email } = req.body;
-    // Database part 
-    client.connect()
+    // Database part
     client.query("SELECT * FROM subscriptions WHERE email = $1", [email], (err, response) => {
             if (err) {
-              console.log(err.stack)
-              client.end(); 
+              console.log(err)
             } else {
               if (response.rows.length === 0) {
                 client.query("INSERT INTO subscriptions (email) VALUES ($1)", [email])
-                .then(() => client.end())
-                res.sendStatus(200);
+                  .then(() => res.sendStatus(200))
+                  .catch(err => {
+                    console.log(err);
+                    res.sendStatus(500);
+                  })
                 } else {
-                client.end();
-                res.sendStatus(400);
+                res.sendStatus(409);
                 } 
             }
           })

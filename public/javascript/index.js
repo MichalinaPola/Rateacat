@@ -26,10 +26,11 @@ submit.addEventListener("click", function() {
                     console.log("response ok")
                     initial.style.display = "none";
                     success.style.display = "block";
-                } if (res.status === 400) {
+                } 
+                 if (res.status === 409) {
                     emailExists.style.display = "block";
                 } else {
-                    console.log("Why are we even reaching this else???")
+                    console.log("Unknown problem")
                 }
             })
     } else {error.style.display = "block";}
