@@ -387,4 +387,233 @@ footer .footer-legal {
 footer .taller {
   line-height: 4em;
 }
+
+/* reviews page styling */
+header.reviews-header {
+  margin-bottom: 4em;
+}
+
+header.reviews-header .search-background {
+  width: 80%;
+  position: relative;
+  left: 10%;
+  top: 100px;
+}
+
+header.reviews-header .logo {
+  position: absolute;
+  top: 20px;
+  left: -10px;
+}
+
+header.reviews-header .big-button {
+  width: 17rem;
+  color: white;
+  border-radius: 40px;
+  line-height: 6.5rem;
+  text-align: center;
+  font-size: 1.9rem;
+  border-width: 0;
+  font-weight: bold;
+}
+
+header.reviews-header .back {
+  background-color: #A9DCDC;
+  position: absolute;
+  right: 50px;
+  top: 20px;
+}
+
+header.reviews-header .add {
+  background-color: #FAA443;
+  position: absolute;
+  left: 40px;
+  top: 81%;
+}
+
+header.reviews-header .random {
+  background-color: #80C56A;
+  position: absolute;
+  right: 50px;
+  top: 81%;
+}
+
+header.reviews-header h2 {
+  background-color: white;
+  border-radius: 80px;
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+  top: -390px;
+  width: 45%;
+  padding: 0.8em 0;
+  font-size: 1.9em;
+  line-height: 1.5em;
+}
+
+header.reviews-header .search-options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 58%;
+  position: relative;
+  margin: 0 auto;
+  top: -300px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header.reviews-header .search-options select {
+  color: #8B9399;
+  background-color: white;
+  width: 20%;
+  height: 3em;
+  font-size: 1.2em;
+  border-width: 0 0 0 25px;
+  border-color: white;
+}
+
+header.reviews-header .search-form button {
+  background-color: #F37F71;
+  border-radius: 80px;
+  color: white;
+  width: 15rem;
+  font-size: 1.9em;
+  padding: 0.3em 0;
+  position: absolute;
+  top: 70%;
+  left: 40%;
+  border-width: 0;
+}
+
+.add:hover {
+  cursor: pointer;
+}
+
+/* More CSS will be added here at the stage when I style select items with JS */
+/* Adding a review form */
+h3 {
+  background-color: white;
+  border-radius: 80px;
+  position: relative;
+  top: 130px;
+  left: 180px;
+  padding: 1em 2em;
+  width: 57%;
+  font-size: 1.3em;
+}
+
+form.add-review {
+  width: 80%;
+  height: 1180px;
+  margin: 0 auto;
+  background-color: #FAA443;
+  border-radius: 40px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+form.add-review > * {
+  color: white;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  font-size: 1.3em;
+  width: 40%;
+  position: relative;
+  top: 120px;
+}
+
+form.add-review p {
+  margin: 0;
+}
+
+form.add-review .item-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 1.5em 0;
+}
+
+form.add-review select, form.add-review input {
+  width: 25%;
+  color: #8B9399;
+  background-color: white;
+  border-color: white;
+  font-size: 0.85em;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+}
+
+form.add-review select {
+  border-width: 5px;
+}
+
+form.add-review input {
+  line-height: 2em;
+  border-width: 0;
+  padding-left: 10px;
+  border-radius: 5px;
+}
+
+form.add-review .special-paragraph {
+  padding: 30px 0 20px;
+  line-height: 1.3em;
+}
+
+form.add-review .fa-star {
+  font-size: 1.2em;
+}
+
+form.add-review textarea {
+  border: none;
+  border-radius: 40px;
+}
+
+.form-end {
+  position: relative;
+  top: -135px;
+  left: 22%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 55%;
+}
+
+.form-end h4 {
+  font-size: 1.3em;
+  background-color: white;
+  border-radius: 80px;
+  padding: 1em 2em;
+}
+
+.form-end .button-submit {
+  background-color: #80C56A;
+  color: white;
+  border-radius: 80px;
+  border-width: 0;
+  font-size: 2.3em;
+  padding: 0 1em;
+  height: 65px;
+  font-weight: bold;
+}
 /*# sourceMappingURL=main.css.map */

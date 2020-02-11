@@ -1,10 +1,4 @@
-// main colours
-$orange: #FAA443;
-$red: #F37F71;
-$green: #80C56A;
-$blue: #A9DCDC;
-$grey: #8B9399;
-$border-radius: 80px;
+@import "css-modules/\ _variables.scss";
 
 body {
     margin: 0;
@@ -313,5 +307,188 @@ footer {
     }
     .taller {
         line-height: 4em;
+    }
+}
+
+/* reviews page styling */ 
+header.reviews-header {
+    margin-bottom: 4em;
+    .search-background {
+        width: 80%;
+        position: relative;
+        left: 10%;
+        top: 100px;
+    }   
+    .logo {
+        position: absolute;
+        top: 20px;
+        left: -10px;
+    }
+    .big-button {
+        width: 17rem;
+        color: white;
+        border-radius: 40px;
+        line-height: 6.5rem;
+        text-align: center;
+        font-size: 1.9rem;
+        border-width: 0;
+        font-weight: bold;
+
+    }
+    .back {
+        background-color: $blue;
+        position: absolute;
+        right: 50px;
+        top: 20px;
+    }
+    .add {
+        background-color: $orange;
+        position: absolute;
+        left: 40px;
+        top: 81%;
+    }
+    .random {
+        background-color: $green;
+        position: absolute;
+        right: 50px;
+        top: 81%;
+    }
+    h2 {
+        background-color: white;
+        border-radius: $border-radius;
+        position: relative;
+        margin: 0 auto;
+        text-align: center;
+        top: -390px;
+        width: 45%;
+        padding: 0.8em 0;
+        font-size: 1.9em;
+        line-height: 1.5em;
+    }
+    .search-options {
+        display: flex;
+        width: 58%;
+        position: relative;
+        margin: 0 auto;
+        top: -300px;
+        justify-content: space-between;
+        select {
+            color: $grey;
+            background-color: white;
+            width: 20%;
+            height: 3em;
+            font-size: 1.2em;
+            border-width: 0 0 0 25px;
+            border-color: white;
+        }
+    }
+    .search-form button {
+        background-color:$red;
+        border-radius: $border-radius;
+        color: white;
+        width: 15rem;
+        font-size: 1.9em;
+        padding: 0.3em 0;
+        position: absolute;
+        top: 70%;
+        left: 40%;
+        border-width: 0;
+    }
+}
+.add:hover {
+    cursor: pointer;
+}
+/* More CSS will be added here at the stage when I style select items with JS */
+
+/* Adding a review form */
+h3 {
+    background-color: white;
+    border-radius: $border-radius;
+    position: relative;
+    top: 130px;
+    left: 180px;
+    padding: 1em 2em;
+    width: 57%;
+    font-size: 1.3em;
+}
+form.add-review {
+    width: 80%;
+    height: 1180px;
+    margin: 0 auto;
+    background-color: $orange;
+    border-radius: 40px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    > * {
+        color: white;
+        align-content: center;
+        font-size: 1.3em;
+        width: 40%;
+        position: relative;
+        top: 120px;
+    }
+    p {
+        margin: 0;
+    }
+    .item-wrapper {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        margin: 1.5em 0;
+    }
+    select, input {
+        width: 25%;
+        color: $grey;
+        background-color: white;
+        border-color: white;
+        font-size: 0.85em;
+        box-sizing: content-box;
+    }
+    select {
+        border-width: 5px;
+    }
+    input {
+        line-height: 2em;
+        border-width: 0;
+        padding-left: 10px;
+        border-radius: 5px;
+    }
+    .special-paragraph {
+        padding: 30px 0 20px;
+        line-height: 1.3em;
+    }
+    .fa-star {
+        font-size: 1.2em;
+    }
+    textarea {
+        border: none;
+        border-radius: 40px;
+    }
+}
+.form-end {
+    position: relative;
+    top: -135px;
+    left: 22%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 55%;
+    h4 {
+        font-size: 1.3em;
+        background-color: white;
+        border-radius: $border-radius;
+        padding: 1em 2em;
+    }
+    .button-submit {
+        background-color: $green;
+        color: white;
+        border-radius: $border-radius;
+        border-width: 0;
+        font-size: 2.3em;
+        padding: 0 1em;
+        height: 65px;
+        font-weight: bold;
     }
 }
