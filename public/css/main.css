@@ -186,7 +186,7 @@ nav li:hover {
   text-align: center;
 }
 
-.featured .cat h3 {
+.featured .cat .cat-name {
   font-size: 1.8em;
   margin: 0.5em;
 }
@@ -406,24 +406,6 @@ header.reviews-header .logo {
   left: -10px;
 }
 
-header.reviews-header .big-button {
-  width: 17rem;
-  color: white;
-  border-radius: 40px;
-  line-height: 6.5rem;
-  text-align: center;
-  font-size: 1.9rem;
-  border-width: 0;
-  font-weight: bold;
-}
-
-header.reviews-header .back {
-  background-color: #A9DCDC;
-  position: absolute;
-  right: 50px;
-  top: 20px;
-}
-
 header.reviews-header .add {
   background-color: #FAA443;
   position: absolute;
@@ -487,17 +469,42 @@ header.reviews-header .search-form button {
   border-width: 0;
 }
 
+.big-button {
+  width: 17rem;
+  color: white;
+  border-radius: 40px;
+  line-height: 6.5rem;
+  text-align: center;
+  font-size: 1.9rem;
+  border-width: 0;
+  font-weight: bold;
+}
+
+.back {
+  background-color: #A9DCDC;
+  position: absolute;
+  right: 50px;
+  top: 20px;
+}
+
+.back-to-reviews {
+  background-color: #F37F71;
+  position: absolute;
+  left: 50px;
+  top: 20px;
+}
+
 .add:hover {
   cursor: pointer;
 }
 
 /* More CSS will be added here at the stage when I style select items with JS */
 /* Adding a review form */
-h3 {
+.review-heading {
   background-color: white;
   border-radius: 80px;
   position: relative;
-  top: 130px;
+  top: 145px;
   left: 180px;
   padding: 1em 2em;
   width: 57%;
@@ -507,7 +514,7 @@ h3 {
 form.add-review {
   width: 80%;
   height: 1180px;
-  margin: 0 auto;
+  margin: 30px auto 0;
   background-color: #FAA443;
   border-radius: 40px;
   text-align: center;
@@ -582,6 +589,7 @@ form.add-review .fa-star {
 form.add-review textarea {
   border: none;
   border-radius: 40px;
+  padding: 10px 15px;
 }
 
 .form-end {
@@ -615,5 +623,86 @@ form.add-review textarea {
   padding: 0 1em;
   height: 65px;
   font-weight: bold;
+}
+
+.footer-add {
+  margin-top: 0em;
+}
+
+/* Styling the random review page */
+.review-container {
+  background-color: #80C56A;
+  width: 78%;
+  margin: 3em auto 0;
+  padding: 10px;
+  border-radius: 30px;
+}
+
+.review-container .review-title, .review-container .short-quote, .review-container .item-wrapper {
+  color: white;
+  text-align: center;
+  margin: 1.5em auto;
+}
+
+.review-container .review-title {
+  width: 65%;
+  line-height: 1.4em;
+  font-size: 2em;
+}
+
+.review-container .short-quote {
+  width: 40%;
+  font-size: 1.75em;
+  font-weight: 100;
+}
+
+.review-container .long-descprition {
+  width: 85%;
+  margin: 2em auto 0;
+  background-color: white;
+  border-radius: 30px;
+  padding: 10px 25px;
+  color: #8B9399;
+  line-height: 2.1em;
+  font-size: 1.1em;
+}
+
+.review-container .review-grades {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  margin: 1em 0 3em;
+  padding: 0 40px;
+}
+
+.review-container .right-grade-column, .review-container .left-grade-column {
+  width: 50%;
+  font-size: 1.4em;
+  padding-left: 10px;
+}
+
+.review-container .review-stars {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0.2em auto;
+}
+
+.review-container .review-stars .stars {
+  padding: 21px 0;
+}
+
+.review-container .review-stars p {
+  width: 40%;
+  text-align: left;
+}
+
+.back-to-search {
+  background-color: #8B9399;
+  color: white;
+  margin: 0 auto -1.5em;
+  position: relative;
+  top: -40px;
 }
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Add a review</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://kit.fontawesome.com/df7731844b.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="images/mini-icon.png" />
+
+</head>
+<body>
+    <h1 class="big-button back"><a href="index.html">Back to home</a></h1>
+    <h1 class="big-button back-to-reviews"><a href="reviews.html">Back to reviews</a></h1>
+    <h3 class="review-heading"> 
+        <span class=grey> Fill in the cat's </span>
+        <span class="red">details</span> 
+        <span class="grey"> write your review. It's that </span>
+        <span class="green">simple!</span>
+    </h3>
+    <form class="add-review"> 
+        <div class="left-column">
+            <div class="item-wrapper">
+                <p>Let's start with the name</p>
+                <input type="text" name="name" value="Enter name">
+            </div>
+            <div class="item-wrapper">    
+                <p>What colour is the cat?</p>
+                <select name="colour">
+                    <option value="colour">Colour</option>
+                    <option value="white">White</option>
+                    <option value="orange">Orange</option>
+                    <option value="grey">Grey</option>
+                    <option value="tabby">Tabby</option>
+                    <option value="brown">Brown</option>
+                    <option value="black">Black</option>
+                </select>
+            </div>
+            <div class="item-wrapper">
+                <p>How old is the cat?</p>
+                <select name="age">
+                    <option value="age">Age</option>
+                    <option value="kitten">Kitten</option>
+                    <option value="youngster">Youngster</option>
+                    <option value="mature">Mature</option>
+                    <option value="senior">Senior</option>
+                </select>
+            </div>
+            <div class="item-wrapper">
+                <p>Is the cat a boy or a girl?</p>
+                <select name="gender">
+                    <option value="gender">Gender</option>
+                    <option value="girl">Girl</option>
+                    <option value="boy">Boy</option>
+                </select>
+            </div>
+            <p class="special-paragraph">Please provide a short summary of your review in 40 chracters or fewer.</p>
+            <textarea name="summary" rows="10" cols="70" maxlength="40"></textarea>
+            <p class="special-paragraph">How do you rate this cat in terms of:</p>
+            <div class="item-wrapper">
+                <p>Softness</p>
+                <div>
+                    <span class="fas fa-star"></span>
+                    <span class="far fa-star"></span>
+                    <span class="far fa-star"></span>
+                    <span class="far fa-star"></span>
+                    <span class="far fa-star"></span>
+                </div>
+            </div>
+            <div class="item-wrapper">
+                <p>Politeness</p>
+                <div>
+                    <span class="fas fa-star"></span>
+                    <span class="far fa-star"></span>
+                    <span class="far fa-star"></span>
+                    <span class="far fa-star"></span>
+                    <span class="far fa-star"></span>
+                </div>
+            </div>
+            <div class="item-wrapper">
+                <p>Cuteness</p>
+                <div>
+                    <span class="fas fa-star"></span>
+                    <span class="far fa-star"></span>
+                    <span class="far fa-star"></span>
+                    <span class="far fa-star"></span>
+                    <span class="far fa-star"></span>
+                </div>
+            </div>
+            <div class="item-wrapper">
+                <p>Agility</p>
+                <div>
+                    <span class="fas fa-star"></span>
+                    <span class="far fa-star"></span>
+                    <span class="far fa-star"></span>
+                    <span class="far fa-star"></span>
+                    <span class="far fa-star"></span>
+                </div>
+            </div>
+            <div class="item-wrapper">
+                <p>Hunting skills</p>
+                <div>
+                    <span class="fas fa-star"></span>
+                    <span class="far fa-star"></span>
+                    <span class="far fa-star"></span>
+                    <span class="far fa-star"></span>
+                    <span class="far fa-star"></span>
+                </div>
+            </div>
+        </div>
+        <div class="right-column">
+            <p class="special-paragraph">Here goes the main body of your review. <br> Please use no more than 2000 characters.</p>
+            <textarea name="review-body" rows="60" cols="70" maxlength="2000"></textarea>
+        </div>
+    </form>
+    <div class="form-end">
+        <h4>
+            <span class="grey">Looking </span>
+            <span class="orange">good?</span> 
+            <span class="grey">Then </span> 
+            <span class="red">submit</span> 
+            <span class="grey">your review</span>
+        </h4>
+        <button class="button-submit" type="button">Submit</button>
+    </div>
+
+    <footer class="footer-add">
+            <img src="images/footer-cat.png" alt="black and white cat">
+                <div class="footer-info">
+                    <p><span class="red">info@rateacat@com</span></p>
+                    <p><span class="green">+44 (0) 7638 7320</span></p>
+                </div>
+                <div class="footer-legal">
+                    <p><span class="orange taller">Copyright &copy; 2020</span></p>
+                    <p><span class="grey">Terms of use</span></p>
+                    <p><span class="grey">Privacy Policy</span></p>
+                </div>
+    </footer>
+</body>
+</html>
