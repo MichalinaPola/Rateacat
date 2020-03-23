@@ -705,4 +705,156 @@ form.add-review textarea {
   position: relative;
   top: -40px;
 }
+
+/*This is stylying the list of review thumbnails */
+.review-thumbnail {
+  width: 80%;
+  height: 450px;
+  margin: 0 auto 72px;
+  background-color: #A9DCDC;
+  border-radius: 70px;
+  position: relative;
+}
+
+.review-thumbnail img {
+  width: 236px;
+  height: 346px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50px;
+  position: absolute;
+  top: 50px;
+  left: 60px;
+}
+
+.review-thumbnail .thumbnail-title {
+  position: relative;
+  top: 70px;
+  left: 360px;
+  font-size: 3em;
+  font-weight: 100;
+}
+
+.review-thumbnail .thumbnail-content {
+  width: 65%;
+  position: relative;
+  left: 300px;
+  top: 60px;
+  color: #8B9399;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+}
+
+.review-thumbnail .thumbnail-left {
+  width: 60%;
+  margin-left: 60px;
+  margin-top: 30px;
+}
+
+.review-thumbnail .thumbnail-right {
+  width: 50%;
+  margin-left: 30px;
+}
+
+.review-thumbnail h3 {
+  font-size: 1.9em;
+  font-style: italic;
+  font-weight: 100;
+  line-height: 1.3em;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.review-thumbnail .see-review {
+  width: 8em;
+  color: white;
+  border-radius: 40px;
+  line-height: 4rem;
+  text-align: center;
+  font-size: 1.7em;
+  border-width: 0;
+  font-weight: bold;
+  background-color: #80C56A;
+  margin: 20px 0 0 30px;
+}
+
+.review-thumbnail .review-stars {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1.4em;
+}
+
+.review-thumbnail .review-stars .stars {
+  padding: 10px 0;
+}
+
+.review-thumbnail .review-stars p {
+  width: 50%;
+  text-align: left;
+  margin-top: 10px;
+}
+
+.subpages-nav {
+  text-align: center;
+  font-size: 2em;
+  color: #8B9399;
+}
+
+.subpages-nav .underline {
+  text-decoration: underline;
+}
+
+/*This is stylying the about page */
+.about-button {
+  position: absolute;
+  left: 50px;
+  top: 0;
+  background-color: #A9DCDC;
+}
+
+.about-content {
+  width: 85%;
+  margin: 5em auto 0;
+  border: 25px solid #8B9399;
+  border-radius: 70px;
+}
+
+.about-content img {
+  width: 280px;
+  height: 340px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50px;
+  position: absolute;
+  left: 65%;
+  top: 230px;
+}
+
+.about-content h2 {
+  text-align: center;
+  font-size: 2.9em;
+  padding: 0;
+}
+
+.about-content p {
+  text-align: center;
+  font-size: 2em;
+  width: 70%;
+  margin-bottom: 2em;
+}
+
+.about-content .top-p {
+  padding-top: 2.2em;
+}
+
+.about-content .bottom-p {
+  padding-bottom: 1.6em;
+}
 /*# sourceMappingURL=main.css.map */
