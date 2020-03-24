@@ -71,66 +71,42 @@ document.addEventListener("click", closeAllSelect);
 
 //THIS CODE DEALS WITH STAR RATINGS
 
-//I'll think about a smarter way of doing it, but this works for now
-const Sstar1 = document.getElementById("Sstar1");
-const Sstar2 = document.getElementById("Sstar2");
-const Sstar3 = document.getElementById("Sstar3");
-const Sstar4 = document.getElementById("Sstar4");
-const Sstar5 = document.getElementById("Sstar5");
-const Pstar1 = document.getElementById("Pstar1");
-const Pstar2 = document.getElementById("Pstar2");
-const Pstar3 = document.getElementById("Pstar3");
-const pstar4 = document.getElementById("Pstar4");
-const Pstar5 = document.getElementById("Pstar5");
-const Cstar1 = document.getElementById("Cstar1");
-const Cstar2 = document.getElementById("Cstar2");
-const Cstar3 = document.getElementById("Cstar3");
-const Cstar4 = document.getElementById("Cstar4");
-const Cstar5 = document.getElementById("Cstar5");
-const Astar1 = document.getElementById("Astar1");
-const Astar2 = document.getElementById("Astar2");
-const Astar3 = document.getElementById("Astar3");
-const Astar4 = document.getElementById("Astar4");
-const Astar5 = document.getElementById("Astar5");
-const Hstar1 = document.getElementById("Hstar1");
-const Hstar2 = document.getElementById("Hstar2");
-const Hstar3 = document.getElementById("Hstar3");
-const Hstar4 = document.getElementById("Hstar4");
-const Hstar5 = document.getElementById("Hstar5");
+const star2 = ["Sstar2", "Pstar2", "Cstar2", "Astar2", "Hstar2"]
+const star3 = ["Sstar3", "Pstar3", "Cstar3", "Astar3", "Hstar3"]
+const star4 = ["Sstar4", "Pstar4", "Cstar4", "Astar4", "Hstar4"]
+const star5 = ["Sstar5", "Pstar5", "Cstar5", "Astar5", "Hstar5"]
 
-const star2 = [Sstar2, Pstar2, Cstar2, Astar2, Hstar2]
-const star3 = [Sstar3, Pstar3, Cstar3, Astar3, Hstar3]
-const star4 = [Sstar4, Pstar4, Cstar4, Astar4, Hstar4]
-const star5 = [Sstar5, Pstar5, Cstar5, Astar5, Hstar5]
 
 function showStars() {
+  let category = this.id[0]
+  console.log(category)
   // figuring out how many stars to add
   let fullStars = 1
-  if (star2.includes(this)) {
+  if (star2.includes(this.id)) {
     fullStars = 2;
-  } else if (star3.includes(this)) {
+  } else if (star3.includes(this.id)) {
     fullStars = 3
-  } else if (star4.includes(this)) {
+  } else if (star4.includes(this.id)) {
     fullStars = 4
-  } else if (star5.includes(this)) {
+  } else if (star5.includes(this.id)) {
     fullStars = 5
   }
   // hide the original stars
   this.parentNode.classList.toggle("hidden");
-  // instead showing new stars, full and then empty
-  // they need to be packed into a div somehow for reassignment to work
+  // instead showing new stars, full ones and then empty ones
+  let newStars = document.createElement("DIV");
+  this.parentNode.parentNode.appendChild(newStars);
   for (i = 0; i < fullStars; i++) {
     let newStar = document.createElement("SPAN");
     newStar.classList.add("fas", "fa-star", "new-star");
-    newStar.setAttribute("id", "star"+(i+1))
-    this.parentNode.parentNode.appendChild(newStar);
-    // note that this will be problematic when reassigning the stars
+    newStar.setAttribute("id", category+"star"+(i+1))
+    this.parentNode.parentNode.lastChild.appendChild(newStar);
   }
   for (i = 0; i < (5 - fullStars); i++) {
     let newStar = document.createElement("SPAN");
     newStar.classList.add("far", "fa-star", "new-star");
-    newStar.setAttribute("id", "star"+(i+fullStars+1))
-    this.parentNode.parentNode.appendChild(newStar);
+    newStar.setAttribute("id", category+"star"+(i+fullStars+1))
+    this.parentNode.parentNode.lastChild.appendChild(newStar);
   }
   document.querySelectorAll('.fa-star').forEach(item => {
     item.addEventListener('click', showStars)
