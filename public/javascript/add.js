@@ -69,8 +69,8 @@ function closeAllSelect(elmnt) {
 // If the user clicks anywhere outside the select box, close all select boxes:
 document.addEventListener("click", closeAllSelect);
 
-//THIS CODE DEALS WITH STAR RATINGS
 
+//THIS CODE DEALS WITH STAR RATINGS
 const star2 = ["Sstar2", "Pstar2", "Cstar2", "Astar2", "Hstar2"]
 const star3 = ["Sstar3", "Pstar3", "Cstar3", "Astar3", "Hstar3"]
 const star4 = ["Sstar4", "Pstar4", "Cstar4", "Astar4", "Hstar4"]
@@ -78,8 +78,8 @@ const star5 = ["Sstar5", "Pstar5", "Cstar5", "Astar5", "Hstar5"]
 
 
 function showStars() {
+  //with this it knows which category we're in
   let category = this.id[0]
-  console.log(category)
   // figuring out how many stars to add
   let fullStars = 1
   if (star2.includes(this.id)) {
@@ -93,7 +93,7 @@ function showStars() {
   }
   // hide the original stars
   this.parentNode.classList.toggle("hidden");
-  // instead showing new stars, full ones and then empty ones
+  // instead show new stars, full ones and then empty ones
   let newStars = document.createElement("DIV");
   this.parentNode.parentNode.appendChild(newStars);
   for (i = 0; i < fullStars; i++) {
@@ -108,6 +108,7 @@ function showStars() {
     newStar.setAttribute("id", category+"star"+(i+fullStars+1))
     this.parentNode.parentNode.lastChild.appendChild(newStar);
   }
+  // assign event listener on them too so ratings can be changed many times
   document.querySelectorAll('.fa-star').forEach(item => {
     item.addEventListener('click', showStars)
   })
