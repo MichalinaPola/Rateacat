@@ -1,0 +1,85 @@
+@import "css-modules/\ _variables.scss";
+
+.custom-select {
+    width: 120px;
+    position: relative;
+  }
+  
+  .custom-select select {
+    display: none;
+  }
+  
+  .select-selected {
+    background-color: white;
+    border-radius: 7px;
+  }
+  
+  /* Style the arrow */
+  .select-selected:after {
+    position: absolute;
+    content: "";
+    top: 18px;
+    left: 100px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: $grey transparent transparent transparent;
+  }
+  
+  /* Point the arrow upwards */
+  .select-selected.select-arrow-active:after {
+    border-color: transparent transparent $grey transparent;
+    top: 7px;
+  }
+  
+  /* style the items (options), including the selected item: */
+  .select-items div,.select-selected {
+    color: $grey;
+    font-size: 0.8em;
+    text-align: left;
+    padding: 8px 0 8px 10px;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+  }
+  
+  /* Style items (options): */
+  .select-items {
+    position: absolute;
+    background-color: white;
+    border-radius: 7px;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 5;
+  }
+  
+  /* Hide the items when the select box is closed: */
+  .select-hide {
+    display: none;
+  }
+  
+  .select-items div:hover, .same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+
+textarea {
+  outline: none;
+  resize: none;
+  &.small-textarea {
+    font-size: 1.5em;
+  }
+  &.big-textarea {
+    font-size: 1em;
+  }
+}
+
+/*For the stars rating */
+.hidden {
+  display: none;
+}
+
+.new-star {
+  margin-left:7px;
+}

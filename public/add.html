@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Add a review</title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/add.css">
     <script src="https://kit.fontawesome.com/df7731844b.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" type="image/x-icon" href="images/mini-icon.png" />
 
@@ -27,91 +28,107 @@
             </div>
             <div class="item-wrapper">    
                 <p>What colour is the cat?</p>
-                <select name="colour">
-                    <option value="colour">Colour</option>
-                    <option value="white">White</option>
-                    <option value="orange">Orange</option>
-                    <option value="grey">Grey</option>
-                    <option value="tabby">Tabby</option>
-                    <option value="brown">Brown</option>
-                    <option value="black">Black</option>
-                </select>
+                <div class="custom-select">
+                    <select name="colour">
+                        <option value="colour">Colour</option>
+                        <option value="white">White</option>
+                        <option value="orange">Orange</option>
+                        <option value="grey">Grey</option>
+                        <option value="tabby">Tabby</option>
+                        <option value="brown">Brown</option>
+                        <option value="black">Black</option>
+                    </select>
+                </div>
             </div>
             <div class="item-wrapper">
                 <p>How old is the cat?</p>
-                <select name="age">
-                    <option value="age">Age</option>
-                    <option value="kitten">Kitten</option>
-                    <option value="youngster">Youngster</option>
-                    <option value="mature">Mature</option>
-                    <option value="senior">Senior</option>
-                </select>
+                <div class="custom-select">
+                    <select name="age">
+                        <option value="age">Age</option>
+                        <option value="kitten">Kitten</option>
+                        <option value="youngster">Youngster</option>
+                        <option value="mature">Mature</option>
+                        <option value="senior">Senior</option>
+                    </select>
+                </div>
             </div>
             <div class="item-wrapper">
                 <p>Is the cat a boy or a girl?</p>
-                <select name="gender">
-                    <option value="gender">Gender</option>
-                    <option value="girl">Girl</option>
-                    <option value="boy">Boy</option>
-                </select>
+                <div class="custom-select">
+                    <select name="gender">
+                        <option value="gender">Gender</option>
+                        <option value="girl">Girl</option>
+                        <option value="boy">Boy</option>
+                    </select>
+                </div>
             </div>
             <p class="special-paragraph">Please provide a short summary of your review in 40 chracters or fewer.</p>
-            <textarea name="summary" rows="10" cols="70" maxlength="40"></textarea>
+            <textarea class="small-textarea" name="summary" rows="3" cols="23" maxlength="40"></textarea>
             <p class="special-paragraph">How do you rate this cat in terms of:</p>
             <div class="item-wrapper">
                 <p>Softness</p>
-                <div>
-                    <span class="fas fa-star"></span>
-                    <span class="far fa-star"></span>
-                    <span class="far fa-star"></span>
-                    <span class="far fa-star"></span>
-                    <span class="far fa-star"></span>
+                <div class="stars-outer">
+                    <div>
+                        <span class="fas fa-star" id="Sstar1"></span>
+                        <span class="far fa-star" id="Sstar2"></span>
+                        <span class="far fa-star" id="Sstar3"></span>
+                        <span class="far fa-star" id="Sstar4"></span>
+                        <span class="far fa-star" id="Sstar5"></span>
+                    </div>
                 </div>
             </div>
             <div class="item-wrapper">
                 <p>Politeness</p>
-                <div>
-                    <span class="fas fa-star"></span>
-                    <span class="far fa-star"></span>
-                    <span class="far fa-star"></span>
-                    <span class="far fa-star"></span>
-                    <span class="far fa-star"></span>
+                <div class="stars-outer">
+                    <div>
+                        <span class="fas fa-star" id="Pstar1"></span>
+                        <span class="far fa-star" id="Pstar2"></span>
+                        <span class="far fa-star" id="Pstar3"></span>
+                        <span class="far fa-star" id="Pstar4"></span>
+                        <span class="far fa-star" id="Pstar5"></span>
+                    </div>
                 </div>
             </div>
             <div class="item-wrapper">
                 <p>Cuteness</p>
-                <div>
-                    <span class="fas fa-star"></span>
-                    <span class="far fa-star"></span>
-                    <span class="far fa-star"></span>
-                    <span class="far fa-star"></span>
-                    <span class="far fa-star"></span>
+                <div id="stars-outer">
+                    <div id="stars">
+                        <span class="fas fa-star" id="Cstar1"></span>
+                        <span class="far fa-star" id="Cstar2"></span>
+                        <span class="far fa-star" id="Cstar3"></span>
+                        <span class="far fa-star" id="Cstar4"></span>
+                        <span class="far fa-star" id="Cstar5"></span>
+                    </div>
                 </div>
             </div>
             <div class="item-wrapper">
                 <p>Agility</p>
-                <div>
-                    <span class="fas fa-star"></span>
-                    <span class="far fa-star"></span>
-                    <span class="far fa-star"></span>
-                    <span class="far fa-star"></span>
-                    <span class="far fa-star"></span>
+                <div id="stars-outer">
+                    <div>
+                        <span class="fas fa-star" id="Astar1"></span>
+                        <span class="far fa-star" id="Astar2"></span>
+                        <span class="far fa-star" id="Astar3"></span>
+                        <span class="far fa-star" id="Astar4"></span>
+                        <span class="far fa-star" id="Astar5"></span>
+                    </div>
                 </div>
             </div>
             <div class="item-wrapper">
                 <p>Hunting skills</p>
-                <div>
-                    <span class="fas fa-star"></span>
-                    <span class="far fa-star"></span>
-                    <span class="far fa-star"></span>
-                    <span class="far fa-star"></span>
-                    <span class="far fa-star"></span>
+                <div id="stars-outer">
+                    <div>
+                        <span class="fas fa-star" id="Hstar1"></span>
+                        <span class="far fa-star" id="Hstar2"></span>
+                        <span class="far fa-star" id="Hstar3"></span>
+                        <span class="far fa-star" id="Hstar4"></span>
+                        <span class="far fa-star" id="Hstar5"></span>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="right-column">
             <p class="special-paragraph">Here goes the main body of your review. <br> Please use no more than 2000 characters.</p>
-            <textarea name="review-body" rows="60" cols="70" maxlength="2000"></textarea>
+            <textarea class="big-textarea" name="review-body" rows="32" cols="36" maxlength="2000"></textarea>
         </div>
     </form>
     <div class="form-end">
@@ -137,5 +154,7 @@
                     <p><span class="grey">Privacy Policy</span></p>
                 </div>
     </footer>
+
+    <script src="javascript/add.js"></script>
 </body>
 </html>

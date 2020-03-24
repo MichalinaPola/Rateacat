@@ -582,14 +582,14 @@ form.add-review .special-paragraph {
   line-height: 1.3em;
 }
 
-form.add-review .fa-star {
+form.add-review .fa-star, form.add-review .fa-star-half-alt {
   font-size: 1.2em;
 }
 
 form.add-review textarea {
   border: none;
   border-radius: 40px;
-  padding: 10px 15px;
+  padding: 15px 25px;
 }
 
 .form-end {
