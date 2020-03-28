@@ -24,12 +24,12 @@
         <div class="left-column">
             <div class="item-wrapper">
                 <p>Let's start with the name</p>
-                <input type="text" name="name" value="Enter name">
+                <input type="text" name="cat-name" placeholder="Enter name" id="cat-name">
             </div>
             <div class="item-wrapper">    
                 <p>What colour is the cat?</p>
                 <div class="custom-select">
-                    <select name="colour">
+                    <select name="colour" id="colour">
                         <option value="colour">Colour</option>
                         <option value="white">White</option>
                         <option value="orange">Orange</option>
@@ -43,7 +43,7 @@
             <div class="item-wrapper">
                 <p>How old is the cat?</p>
                 <div class="custom-select">
-                    <select name="age">
+                    <select name="age" id="age">
                         <option value="age">Age</option>
                         <option value="kitten">Kitten</option>
                         <option value="youngster">Youngster</option>
@@ -55,7 +55,7 @@
             <div class="item-wrapper">
                 <p>Is the cat a boy or a girl?</p>
                 <div class="custom-select">
-                    <select name="gender">
+                    <select name="gender" id="gender">
                         <option value="gender">Gender</option>
                         <option value="girl">Girl</option>
                         <option value="boy">Boy</option>
@@ -63,75 +63,35 @@
                 </div>
             </div>
             <p class="special-paragraph">Please provide a short summary of your review in 40 chracters or fewer.</p>
-            <textarea class="small-textarea" name="summary" rows="3" cols="23" maxlength="40"></textarea>
+            <textarea class="small-textarea" name="summary" rows="3" cols="23" maxlength="40" id="review-summary"></textarea>
             <p class="special-paragraph">How do you rate this cat in terms of:</p>
             <div class="item-wrapper">
                 <p>Softness</p>
-                <div class="stars-outer">
-                    <div>
-                        <span class="fas fa-star" id="Sstar1"></span>
-                        <span class="far fa-star" id="Sstar2"></span>
-                        <span class="far fa-star" id="Sstar3"></span>
-                        <span class="far fa-star" id="Sstar4"></span>
-                        <span class="far fa-star" id="Sstar5"></span>
-                    </div>
-                </div>
+                <div id="Sstars"><div><span class="fas fa-star" id="Sstar1"></span><span class="far fa-star" id="Sstar2"></span><span class="far fa-star" id="Sstar3"></span><span class="far fa-star" id="Sstar4"></span><span class="far fa-star" id="Sstar5"></span></div></div>
             </div>
             <div class="item-wrapper">
                 <p>Politeness</p>
-                <div class="stars-outer">
-                    <div>
-                        <span class="fas fa-star" id="Pstar1"></span>
-                        <span class="far fa-star" id="Pstar2"></span>
-                        <span class="far fa-star" id="Pstar3"></span>
-                        <span class="far fa-star" id="Pstar4"></span>
-                        <span class="far fa-star" id="Pstar5"></span>
-                    </div>
-                </div>
+                <div id="Pstars"><div><span class="fas fa-star" id="Pstar1"></span><span class="far fa-star" id="Pstar2"></span><span class="far fa-star" id="Pstar3"></span><span class="far fa-star" id="Pstar4"></span><span class="far fa-star" id="Pstar5"></span></div></div>
             </div>
             <div class="item-wrapper">
                 <p>Cuteness</p>
-                <div id="stars-outer">
-                    <div>
-                        <span class="fas fa-star" id="Cstar1"></span>
-                        <span class="far fa-star" id="Cstar2"></span>
-                        <span class="far fa-star" id="Cstar3"></span>
-                        <span class="far fa-star" id="Cstar4"></span>
-                        <span class="far fa-star" id="Cstar5"></span>
-                    </div>
-                </div>
+                <div id="Cstars"><div><span class="fas fa-star" id="Cstar1"></span><span class="far fa-star" id="Cstar2"></span><span class="far fa-star" id="Cstar3"></span><span class="far fa-star" id="Cstar4"></span><span class="far fa-star" id="Cstar5"></span></div></div>
             </div>
             <div class="item-wrapper">
                 <p>Agility</p>
-                <div id="stars-outer">
-                    <div>
-                        <span class="fas fa-star" id="Astar1"></span>
-                        <span class="far fa-star" id="Astar2"></span>
-                        <span class="far fa-star" id="Astar3"></span>
-                        <span class="far fa-star" id="Astar4"></span>
-                        <span class="far fa-star" id="Astar5"></span>
-                    </div>
-                </div>
+                <div id="Astars"><div><span class="fas fa-star" id="Astar1"></span><span class="far fa-star" id="Astar2"></span><span class="far fa-star" id="Astar3"></span><span class="far fa-star" id="Astar4"></span><span class="far fa-star" id="Astar5"></span></div></div>
             </div>
             <div class="item-wrapper">
                 <p>Hunting skills</p>
-                <div id="stars-outer">
-                    <div>
-                        <span class="fas fa-star" id="Hstar1"></span>
-                        <span class="far fa-star" id="Hstar2"></span>
-                        <span class="far fa-star" id="Hstar3"></span>
-                        <span class="far fa-star" id="Hstar4"></span>
-                        <span class="far fa-star" id="Hstar5"></span>
-                    </div>
-                </div>
+                <div id="Hstars"><div><span class="fas fa-star" id="Hstar1"></span><span class="far fa-star" id="Hstar2"></span><span class="far fa-star" id="Hstar3"></span><span class="far fa-star" id="Hstar4"></span><span class="far fa-star" id="Hstar5"></span></div></div>
             </div>
         </div>
         <div class="right-column">
             <p class="special-paragraph">Here goes the main body of your review. <br> Please use no more than 2000 characters.</p>
-            <textarea class="big-textarea" name="review-body" rows="32" cols="36" maxlength="2000"></textarea>
+            <textarea class="big-textarea" name="review-body" rows="32" cols="36" maxlength="2000" id="review-body"></textarea>
         </div>
     </form>
-    <div class="form-end">
+    <div class="form-end" id="add-form-end">
         <h4>
             <span class="grey">Looking </span>
             <span class="orange">good?</span> 
@@ -139,7 +99,18 @@
             <span class="red">submit</span> 
             <span class="grey">your review</span>
         </h4>
-        <button class="button-submit" type="button">Submit</button>
+        <button class="button-submit" type="button" id="add-btn">Submit</button>
+    </div>
+    <div class="user-error" id="user-error">
+        <h5>Please complete all the required fields</h5>
+    </div>
+    <div class="success-form" id="success-add-form">
+        <h4>
+            <span class="red">Great! </span>
+            <span class="grey">We've</span> 
+            <span class="green">added </span> 
+            <span class="grey">your review</span> 
+        </h4>
     </div>
 
     <footer class="footer-add">

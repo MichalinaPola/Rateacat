@@ -1,3 +1,4 @@
+
 // THIS CODE TRANSFORMS THE DROPDOWN MENUS
 var x, i, j, selElmnt, a, b, c;
 // Look for any elements with the class "custom-select":
@@ -98,13 +99,13 @@ function showStars() {
   this.parentNode.parentNode.appendChild(newStars);
   for (i = 0; i < fullStars; i++) {
     let newStar = document.createElement("SPAN");
-    newStar.classList.add("fas", "fa-star", "new-star");
+    newStar.classList.add("fas", "fa-star");
     newStar.setAttribute("id", category+"star"+(i+1))
     this.parentNode.parentNode.lastChild.appendChild(newStar);
   }
   for (i = 0; i < (5 - fullStars); i++) {
     let newStar = document.createElement("SPAN");
-    newStar.classList.add("far", "fa-star", "new-star");
+    newStar.classList.add("far", "fa-star");
     newStar.setAttribute("id", category+"star"+(i+fullStars+1))
     this.parentNode.parentNode.lastChild.appendChild(newStar);
   }
@@ -117,3 +118,67 @@ function showStars() {
 document.querySelectorAll('.fa-star').forEach(item => {
   item.addEventListener('click', showStars)
 })
+
+// SENDING A NEW REVIEW TO BACKEND
+let beforeLook = document.getElementById("add-form-end");
+let afterLook = document.getElementById("success-add-form");
+let addingError = document.getElementById("user-error")
+let addButton = document.getElementById("add-btn");
+//elements of the review specified by the user
+let name = document.getElementById("cat-name");
+let colour = document.getElementById("colour");
+let age = document.getElementById("age");
+let gender = document.getElementById("gender");
+let summary = document.getElementById("review-summary");
+let sstars = document.getElementById("Sstars");
+let pstars = document.getElementById("Pstars");
+let cstars = document.getElementById("Cstars");
+let astars = document.getElementById("Astars");
+let hstars = document.getElementById("Hstars");
+let body = document.getElementById("review-body");
+
+function howManyStars (starsOuter) {
+  let starsArray = starsOuter.lastChild.querySelectorAll("span");
+  let starsCounter = 0
+  for (const e of starsArray) {
+    if (e.className.includes("fas")) {
+      starsCounter = starsCounter + 1;
+    }
+  }
+  return starsCounter;
+}
+
+function inputValid () {
+  if (name.value == "" || colour.value == "colour" || age.value == "age" || 
+  gender.value == "gender" || summary.value == "" || body.value == "") {
+    return 0
+  }
+  return 1
+}
+
+addButton.addEventListener("click", function() {
+  // gathering and checking user input
+  let stars = [howManyStars(sstars), howManyStars(pstars), howManyStars(cstars), 
+    howManyStars(astars), howManyStars(hstars)];
+  let ovStars = (stars[0] + stars[1] + stars[2] + stars[3] + stars[4])/5
+  if (inputValid()) {
+    // sending the new review to backend
+    let fetchNewReview = {
+        method: 'POST',
+        body: JSON.stringify({name: name.value, colour: colour.value, age: age.value, 
+          gender: gender.value, summary: summary.value, sstars: stars[0], pstars: stars[1],
+           cstars: stars[2], astars: stars[3], hstars: stars[4], overall: ovStars, revbody: body.value}),
+        headers: {"Content-Type": "application/json"}
+    }
+    fetch('/new-review', fetchNewReview)
+            .then(res => {
+                if (res.ok){
+                    beforeLook.style.display = "none";
+                    addingError.style.display = "none";
+                    afterLook.style.display = "flex";;
+                } else {
+                    console.log("There was a problem with backend")
+                }
+            })
+    } else {addingError.style.display = "block";}
+});

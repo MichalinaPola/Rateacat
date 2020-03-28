@@ -1,5 +1,5 @@
 
-// sing-up form
+// SING UP FORM
 let initial = document.getElementById("before-sing-up");
 let success = document.getElementById("success");
 let submit = document.getElementById("sing-up-btn");

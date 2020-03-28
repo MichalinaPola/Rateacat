@@ -22,9 +22,9 @@ const client = new Client({
 })
 client.connect()
 
+// Handling the newsletter sign-up
 app.post('/sign-up', (req, res) => {
     const { email } = req.body;
-    // Database part
     client.query("SELECT * FROM subscriptions WHERE email = $1", [email], (err, response) => {
             if (err) {
               console.log(err)
@@ -41,5 +41,16 @@ app.post('/sign-up', (req, res) => {
                 } 
             }
           })
+});
+
+// Adding a new review to the database
+app.post('/new-review', (req, res) => {
+  client.query("INSERT INTO reviews(name, colour, age, gender, summary, sstars, pstars, cstars, astars, hstars, overall, body) VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12);", [req.body.name, req.body.colour, req.body.age, req.body.gender, req.body.summary, req.body.sstars, req.body.pstars, req.body.cstars, req.body.astars, req.body.hstars, req.body.overall, req.body.revbody], (err, response) => {
+    if (err) {
+      console.log(err)
+    } else {
+        res.sendStatus(200)
+    }
+  })
 });
 
