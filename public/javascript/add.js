@@ -175,7 +175,7 @@ addButton.addEventListener("click", function() {
                 if (res.ok){
                     beforeLook.style.display = "none";
                     addingError.style.display = "none";
-                    afterLook.style.display = "flex";;
+                    afterLook.style.display = "flex";
                 } else {
                     console.log("There was a problem with backend")
                 }

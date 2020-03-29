@@ -25,7 +25,5 @@
     "request": "^2.88.0",
     "sass": "^1.25.1-test.1"
   },
-  "devDependencies": {
-    "nodemon": "^2.0.2"
-  }
+  "devDependencies": {}
 }
