@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Reviews - rate a cat</title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/reviews.css">
     <link rel="shortcut icon" type="image/x-icon" href="images/mini-icon.png" />
     <script src="https://kit.fontawesome.com/df7731844b.js" crossorigin="anonymous"></script>
 </head>
@@ -25,44 +26,53 @@
         </h2>
         <form class="search-form">
             <div class="search-options">
-                <select name="colour">
-                    <option value="colour">Colour</option>
-                    <option value="white">White</option>
-                    <option value="orange">Orange</option>
-                    <option value="grey">Grey</option>
-                    <option value="tabby">Tabby</option>
-                    <option value="brown">Brown</option>
-                    <option value="black">Black</option>
-                    <option value="any-colour">Any colour</option>
-                </select>
-                <select name="age">
-                    <option value="age">Age</option>
-                    <option value="kitten">Kitten</option>
-                    <option value="youngster">Youngster</option>
-                    <option value="mature">Mature</option>
-                    <option value="senior">Senior</option>
-                    <option value="any-age">Any age</option>
-                </select>
-                <select name="gender">
-                    <option value="gender">Gender</option>
-                    <option value="girl">Girl</option>
-                    <option value="boy">Boy</option>
-                    <option value="any-gender">Any gender</option>
-                </select>
-                <select name="rating">
-                    <option value="rating">Rating</option>
-                    <option value="good">Good (1 star)</option>
-                    <option value="great">Great (2 starts)</option>
-                    <option value="excellent">Excellent (3 stars)</option>
-                    <option value="fantastic">Fantastic (4 stars)</option>
-                    <option value="magnificent">Magnificent (5 stars)</option>
-                    <option value="any-rating">Any rating</option>
-                </select>
+                <div class="custom-select" style="width:180px;">
+                    <select name="colour" id="chosen-colour">
+                        <option value="any">Colour</option>
+                        <option value="%">Any colour</option>
+                        <option value="white%">White</option>
+                        <option value="orange%">Orange</option>
+                        <option value="grey%">Grey</option>
+                        <option value="tabby%">Tabby</option>
+                        <option value="brown%">Brown</option>
+                        <option value="black%">Black</option>
+                    </select>
+                </div>
+                <div class="custom-select" style="width:180px;">
+                    <select name="age" id="chosen-age">
+                        <option value="any">Age</option>
+                        <option value="%">Any age</option>
+                        <option value="kitten%">Kitten</option>
+                        <option value="youngster%">Youngster</option>
+                        <option value="mature%">Mature</option>
+                        <option value="senior%">Senior</option>
+                    </select>
+                </div>
+                <div class="custom-select" style="width:180px;">
+                    <select name="gender" id="chosen-gender">
+                        <option value="any">Gender</option>
+                        <option value="%">Any gender</option>
+                        <option value="girl%">Girl</option>
+                        <option value="boy%">Boy</option>
+                    </select>
+                </div>
+                <div class="custom-select" style="width:180px;">
+                    <select name="rating" id="chosen-rating">
+                        <option value="any">Minimum rating</option>
+                        <option value="0">Any rating</option>
+                        <option value="1">Good (1 star)</option>
+                        <option value="2">Great (2 starts)</option>
+                        <option value="3">Excellent (3 stars)</option>
+                        <option value="4">Fantastic (4 stars)</option>
+                        <option value="5">Magnificent (5 stars)</option>
+                    </select>
+                </div>
             </div>
-            <button type="button">search</button>
+            <button class="add-pointer" type="button" id="search-button">search</button>
+            <p id="error-search">Please tell us what cats you're looking for</p>
         </form>
         <a href="add.html"><button type="button" class="big-button add">Add a review</button></a>
-        <a href="random.html"><button type="button" class="big-button random">Random review</button></a>
+        <a href="random.html"><button type="button" class="big-button random add-pointer">Random review</button></a>
     </header>
 
     <div class="reviews-list">
@@ -109,7 +119,7 @@
                     <a href=#><button type="button" class="see-review">See review</button></a>
                 </div>
             </div>
-            <img src="/public/images/cat-lola.jpg" alt="picture of a cat">
+            <img src="images/cat-lola.jpg" alt="picture of a cat">
         </div>
         <div class="review-thumbnail">
             <h2 class="thumbnail-title">
@@ -154,7 +164,7 @@
                     <a href=#><button type="button" class="see-review">See review</button></a>
                 </div>
             </div>
-            <img src="/public/images/cat-oliver.jpg" alt="picture of a cat">
+            <img src="images/cat-oliver.jpg" alt="picture of a cat">
         </div>
         <div class="review-thumbnail">
             <h2 class="thumbnail-title">
@@ -199,7 +209,7 @@
                     <a href=#><button type="button" class="see-review">See review</button></a>
                 </div>
             </div>
-            <img src="/public/images/cat-peanut.jpg" alt="picture of a cat">
+            <img src="images/cat-peanut.jpg" alt="picture of a cat">
         </div>
         <div class="review-thumbnail">
             <h2 class="thumbnail-title">
@@ -244,7 +254,7 @@
                     <a href=#><button type="button" class="see-review">See review</button></a>
                 </div>
             </div>
-            <img src="/public/images/cat-lola.jpg" alt="picture of a cat">
+            <img src="images/cat-lola.jpg" alt="picture of a cat">
         </div>
         <div class="review-thumbnail">
             <h2 class="thumbnail-title">
@@ -289,7 +299,7 @@
                     <a href=#><button type="button" class="see-review">See review</button></a>
                 </div>
             </div>
-            <img src="/public/images/cat-peanut.jpg" alt="picture of a cat">
+            <img src="images/cat-peanut.jpg" alt="picture of a cat">
         </div>
         <div class="review-thumbnail">
             <h2 class="thumbnail-title">
@@ -334,7 +344,7 @@
                     <a href=#><button type="button" class="see-review">See review</button></a>
                 </div>
             </div>
-            <img src="/public/images/cat-oliver.jpg" alt="picture of a cat">
+            <img src="images/cat-oliver.jpg" alt="picture of a cat">
         </div>
         <div class="review-thumbnail">
             <h2 class="thumbnail-title">
@@ -379,7 +389,7 @@
                     <a href=#><button type="button" class="see-review">See review</button></a>
                 </div>
             </div>
-            <img src="/public/images/cat-peanut.jpg" alt="picture of a cat">
+            <img src="images/cat-peanut.jpg" alt="picture of a cat">
         </div>
         <div class="review-thumbnail">
             <h2 class="thumbnail-title">
@@ -424,7 +434,7 @@
                     <a href=#><button type="button" class="see-review">See review</button></a>
                 </div>
             </div>
-            <img src="/public/images/cat-oliver.jpg" alt="picture of a cat">
+            <img src="images/cat-oliver.jpg" alt="picture of a cat">
         </div>
         <div class="review-thumbnail">
             <h2 class="thumbnail-title">
@@ -469,7 +479,7 @@
                     <a href=#><button type="button" class="see-review">See review</button></a>
                 </div>
             </div>
-            <img src="/public/images/cat-lola.jpg" alt="picture of a cat">
+            <img src="images/cat-lola.jpg" alt="picture of a cat">
         </div>
         <div class="review-thumbnail">
             <h2 class="thumbnail-title">
@@ -514,7 +524,7 @@
                     <a href=#><button type="button" class="see-review">See review</button></a>
                 </div>
             </div>
-            <img src="/public/images/cat-peanut.jpg" alt="picture of a cat">
+            <img src="images/cat-peanut.jpg" alt="picture of a cat">
         </div>
         <p class="subpages-nav"><span class="underline">1</span> 2 3 ... 10</p>
     </div>
@@ -529,6 +539,9 @@
                 <p><span class="grey">Terms of use</span></p>
                 <p><span class="grey">Privacy Policy</span></p>
             </div>
-</footer>
+    </footer>
+
+    <script src="javascript/reviews.js"></script>
+
 </body>
 </html>

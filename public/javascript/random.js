@@ -41,10 +41,32 @@ function displayRandom() {
         .then(res => {
             if (res.ok){
                 res.json().then(function(data) {
-                    const reviewContents = data[0]
-                    // This works! I need to adjust the rest of markup and stars too
+                    const reviewContents = data[0];
+                    // all relevent html elements are updated
                     name.innerHTML = reviewContents.name;
-                    console.log(reviewContents)
+                    colour.innerHTML = reviewContents.colour;
+                    sum.innerHTML = reviewContents.summary;
+                    body.innerHTML = reviewContents.body;
+                    if (reviewContents.age == "mature") {
+                        age.innerHTML = "mature cat"
+                    } else {
+                        age.innerHTML = reviewContents.age
+                    }
+                    if (reviewContents.gender == "boy") {
+                        pronounUpper.innerHTML = "He";
+                        pronounLower.innerHTML = "he";
+                        gender.innerHTML = "male";
+                    } else {
+                        pronounUpper.innerHTML = "She";
+                        pronounLower.innerHTML = "she";
+                        gender.innerHTML = "female";
+                    }
+                    displayStars(sstars, reviewContents.sstars);
+                    displayStars(pstars, reviewContents.pstars);
+                    displayStars(cstars, reviewContents.cstars);
+                    displayStars(astars, reviewContents.astars);
+                    displayStars(hstars, reviewContents.hstars);
+                    displayOverall(overall, parseFloat(reviewContents.overall));
                 });
             } else {
                 console.log("There was a problem with backend")

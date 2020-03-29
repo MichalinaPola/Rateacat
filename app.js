@@ -64,3 +64,18 @@ app.get('/random-review', (req, res) => {
     }
   })
 });
+
+// Searching through reviews
+app.post('/search-reviews', (req, res) => {
+  const passedColour = req.body.colour;
+  const passedAge = req.body.age;
+  const passedGender = req.body.gender;
+  const passedRating = req.body.rating;
+  client.query("SELECT * FROM reviews WHERE colour LIKE $1 AND age LIKE $2 AND gender LIKE $3 AND overall >= $4", [passedColour, passedAge, passedGender, passedRating], (err, response) => {
+    if (err) {
+      console.log(err);
+    } else {
+      res.status(200).send(response.rows)
+    }
+  })
+});

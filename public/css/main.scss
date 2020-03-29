@@ -358,7 +358,6 @@ header.reviews-header {
         select {
             color: $grey;
             background-color: white;
-            width: 20%;
             height: 3em;
             font-size: 1.2em;
             border-width: 0 0 0 25px;
@@ -406,7 +405,10 @@ header.reviews-header {
 .add:hover {
     cursor: pointer;
 }
-/* More CSS will be added here at the stage when I style select items with JS */
+
+.add-pointer:hover {
+    cursor: pointer;
+}
 
 /* Adding a review form */
 .review-heading {
